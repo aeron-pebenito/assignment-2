@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Assignment 2</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src="node_modules/animejs/lib/anime.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+<main id="banksy">
+    <header>
+      <a href="https://medium.com/@leemartin/how-to-recreate-the-banksy-artwork-shredder-using-css-grid-ff20c0f5a19" target="blank">Read Tutorial on Medium</a>
+    </header>
+    
+    <div id="piece" @click="$refs.art.click()">
+      <div id="holder">
+        <div id="painting">        
+          <div id="shredded">
+            <div class="shred"></div>
+            <div class="shred"></div>
+            <div class="shred"></div>
+            <div class="shred"></div>
+            <div class="shred"></div>
+            <div class="shred"></div>
+            <div class="shred"></div>
+            <div class="shred"></div>
+            <div class="shred"></div>
+            <div class="shred"></div>
+            <div class="shred"></div>
+          </div>
+          <div id="original"></div>
+        </div>
+      </div>
+      <div id="frame"></div>    
+    </div>
+    <input ref="art" type="file" accept="image/*" @change="artSelected">
+</main>
+</body>
+</html>
