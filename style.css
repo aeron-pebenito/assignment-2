@@ -1,130 +1,94 @@
-html, body, main {
-  height: 100%;
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
+body {
+  background-color: #222;
+  color: #fff;
+  font-weight: 400;
+  font-size: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  box-sizing: border-box;
+  letter-spacing: 6px;
+  margin: 0;
+  line-height: 1.2;
 }
 
-main {
-  align-items: center;
+.animate-container {
+  flex: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
-#piece {
-  box-shadow: 0 0 20px 0 rgba(0,0,0,0.25);
-  cursor: pointer;
-  height: 50vh;
-  max-height: 820px;
-  position: relative;
-  width: calc(50vh * 0.774);
+.animate-me {
+  margin: 5px 0;
 }
 
-#frame {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/141041/banksy-frame.png);
-  background-size: cover;
-  height: 100%;
-  position: absolute;
-  width: 100%;
+.container {
+  max-width: 600px;
+  margin: 20px auto;
 }
 
-#holder {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/141041/banksy-back.jpg);
-  background-size: cover;
-  height: calc(50vh * 0.69);
-  left: 18.9%;
-  position: absolute;
-  top: 15.4%;
-  width: calc(50vh * 0.774 * 0.617);
+span {
+  display: inline-block;
 }
 
-#painting {
-  height: 100%;
-  position: absolute;
-  transform: translateY(0%);
-  width: 100%;
+.subtitle {
+  font-size: 1vw;
+  font-weight: 200;
+  letter-spacing: 3px;
 }
 
-#original, .shred {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/141041/anne-painting.jpg);
-  background-size: cover;
+h1,
+.title {
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-#original {
-  height: 100%;
-  position: absolute;
-  top: 0;
-  width: 100%;
+p {
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-size: 20px;
 }
 
-#shredded {
-  bottom: 0;
-  display: grid;
-  grid-column-gap: 3px;
-  grid-template-columns: repeat(11, 1fr);
-  height: 100%;
-  position: absolute;
-  width: 100%;
+section {
+  margin-bottom: 40px;
 }
 
-#shredded .shred {
-  background-position: top center;
-  height: 100%;
+.header {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+  background-color: #303030;
+  padding: 20px; 
 }
 
-#shredded .shred:nth-child(1) {
-  background-position: 0% 0%;
+.subheading {
+  font-weight: bolder;
+  font-size: 60px;
+  margin: 20px;
+  
 }
 
-#shredded .shred:nth-child(2) {
-  background-position: 10% 0%;
+h1 {
+  font-size: 40px;
+  font-weight: bolder;
 }
 
-#shredded .shred:nth-child(3) {
-  background-position: 20% 0%;
+h2, h3 {
+  font-size: 40px;
+  font-weight: bolder;
 }
 
-#shredded .shred:nth-child(4) {
-  background-position: 30% 0%;
+p, li {
+  font-size: 20px;
 }
 
-#shredded .shred:nth-child(5) {
-  background-position: 40% 0%;
-}
-
-#shredded .shred:nth-child(6) {
-  background-position: 50% 0%;
-}
-
-#shredded .shred:nth-child(7) {
-  background-position: 60% 0%;
-}
-
-#shredded .shred:nth-child(8) {
-  background-position: 70% 0%;
-}
-
-#shredded .shred:nth-child(9) {
-  background-position: 80% 0%;
-}
-
-#shredded .shred:nth-child(10) {
-  background-position: 90% 0%;
-}
-
-#shredded .shred:nth-child(11) {
-  background-position: 100% 0%;
-}
-
-input {
-  display: none;
-}
-
-header {
-  position: absolute;
-  top: 2em;
-}
-
-header a {
-  color: black;
+#rationale {
+  text-align: left;
+  padding: 20px;
 }

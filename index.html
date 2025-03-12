@@ -2,41 +2,66 @@
 <html lang="en">
 
 <head>
-    <title>Assignment 2</title>
-    <link href="style.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
-    <script src="node_modules/animejs/lib/anime.min.js"></script>
-    <script src="script.js"></script>
+  <title>Assignment 2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+  <script src="node_modules/animejs/lib/anime.min.js"></script>
+  <script type="module" src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+  </script>
 </head>
 
 <body>
-<main id="banksy">
-    <header>
-      <a href="https://medium.com/@leemartin/how-to-recreate-the-banksy-artwork-shredder-using-css-grid-ff20c0f5a19" target="blank">Read Tutorial on Medium</a>
-    </header>
-    
-    <div id="piece" @click="$refs.art.click()">
-      <div id="holder">
-        <div id="painting">        
-          <div id="shredded">
-            <div class="shred"></div>
-            <div class="shred"></div>
-            <div class="shred"></div>
-            <div class="shred"></div>
-            <div class="shred"></div>
-            <div class="shred"></div>
-            <div class="shred"></div>
-            <div class="shred"></div>
-            <div class="shred"></div>
-            <div class="shred"></div>
-            <div class="shred"></div>
-          </div>
-          <div id="original"></div>
-        </div>
-      </div>
-      <div id="frame"></div>    
+
+  <header class="header">
+    <div class="container mt-5 mb-5">
+      <h1 class="title">Letterize.js Proof of Concept</h1>
+      <p class="subtitle">Tyler Pe Benito - Plugin Implementation</p>
     </div>
-    <input ref="art" type="file" accept="image/*" @change="artSelected">
-</main>
+  </header>
+
+  <div id="rationale">
+    <h2>Design Rationale - Tyler Pe Benito</h2>
+
+
+    <p>
+      The <strong>Letterize.js</strong> plugin was chosen for this proof-of-concept because of its ability to enhance text-based content through dynamic letter-by-letter animations. Unlike traditional CSS animations, which often apply effects to entire words or elements, <strong>Letterize.js</strong> provides fine-grained control over individual letters, allowing for creative and engaging visual effects. This makes it an excellent tool for improving user engagement, especially in areas such as typography design, branding, and educational content.
+    </p>
+    <p>
+      One of the primary strengths of <strong>Letterize.js</strong> is its ease of integration. It allows developers to apply transformations to text without requiring complex JavaScript logic or heavy dependencies. By implementing it in this proof-of-concept, I aimed to demonstrate how simple yet effective micro-interactions can be incorporated into web applications to create a more interactive experience.
+    </p>
+    <h3>Opportunities Beyond the Proof-of-Concept</h3>
+    <ul>
+      <li><strong>Interactive Learning & Accessibility:</strong> The plugin could be used to animate words dynamically in <em>language learning applications</em>, where letters fade in or move to assist users with pronunciation and spelling.</li>
+      <li><strong>Branding & Marketing:</strong> Businesses can utilize this plugin for <em>eye-catching typography effects on landing pages</em>, making headlines more engaging without needing complex animations.</li>
+      <li><strong>Gaming & Gamification:</strong> Letter animations can be incorporated into <em>word-based games, quizzes, or interactive storytelling</em>, where letters reveal themselves based on user interaction.</li>
+      <li><strong>E-Commerce & Product Displays:</strong> Online stores could use <em>subtle letter animations to highlight product names</em>, making product listings more visually appealing.</li>
+      <li><strong>Dynamic Text Effects for Social Media:</strong> Letterize.js could be combined with <em>other libraries like GSAP or Anime.js</em> to create social media-ready animated text, improving engagement on platforms like Instagram or TikTok.</li>
+    </ul>
+    <p>
+      By exploring these possibilities, this proof-of-concept serves as a foundation for integrating <strong>Letterize.js</strong> into more advanced applications, demonstrating its potential to enhance text-driven content across various industries.
+    </p>
+
+    <div class="animate-container">
+      <div class="animate-me">E</div>
+      <div class="animate-me">P F</div>
+      <div class="animate-me">O T Z</div>
+      <div class="animate-me">P L D E</div>
+      <div class="animate-me">E P F C D</div>
+      <div class="animate-me">D E C F P Z</div>
+      <div class="animate-me">E F L O C P Z</div>
+      <div class="animate-me">Q R T U H L B X C</div>
+      <div class="animate-me">Z O T E F G H J K L</div>
+    </div>
+
+
+  </div>
+
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>

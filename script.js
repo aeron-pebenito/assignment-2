@@ -1,59 +1,28 @@
-const app = new Vue({
-  el: '#banksy',
-  data() {
-    return {
-      shredding: null,
-      dropping: null
-    }
-  },
-  methods: {
-    shred() {
-      this.shredding = anime({
-        targets: '#original',
-        height: 0,
-        duration: 10000,
-        easing: 'linear'
-      })
+import Letterize from "https://cdn.skypack.dev/letterizejs@2.0.0";
 
-      this.dropping = anime({
-        targets: '#painting',
-        translateY: '101%',
-        duration: 10000,
-        easing: 'linear'
-      })
-    },
-    artSelected(e) {
-      this.shredding.pause()
-      this.dropping.pause()
-      
-      loadImage(
-        e.target.files[0],
-        canvas => {
-          let url = canvas.toDataURL('image/jpeg')
-          
-          document.getElementById('original').style.backgroundImage = `url(${url})`
-          
-          let elements = Array.from(document.getElementsByClassName('shred'))
-          
-          elements.forEach(element => {
-            element.style.backgroundImage = `url(${url})`
-          })
-          
-          document.getElementById('original').style.height    = '100%'
-          document.getElementById('painting').style.transform = 'translateY(0)'
-          
-          this.shred()
-        }, {
-          canvas: true,
-          crop: true,
-          maxHeight: 566,
-          maxWidth: 392,
-          orientation: true
-        }
-      )
-    }
-  },
-  mounted() {
-    this.shred()
-  }
-})
+const test = new Letterize({
+  targets: ".animate-me"
+});
+
+const animation = anime.timeline({
+  targets: test.listAll,
+  delay: anime.stagger(100, {
+    grid: [test.list[0].length, test.list.length],
+    from: "center"
+  }),
+  loop: true
+});
+
+animation
+  .add({
+    scale: 0.5
+  })
+  .add({
+    letterSpacing: "10px"
+  })
+  .add({
+    scale: 1
+  })
+  .add({
+    letterSpacing: "6px"
+  });
